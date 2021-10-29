@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    0deg,
+    rgb(194, 152, 38) 23.8%,
+    rgb(185, 113, 18) 92%
+  );
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  margin: 0;
+  overflow-y: auto;
+}
+
+
+.overlay{
+  position:fixed;
+  display:block;
+  z-index: 2;
+  width:100%;
+  height:100%;
+  background-color: black;
+  opacity: 0.95;
+  color:white;
+  padding-left:auto;
+  padding-right:auto;
+  text-align: center;
+  font-size: 30px;
+}
+.bt{
+  text-align: center;
+  color:white;
+  width:200px;
+  height:50px;
+  margin-top:5%;
+  margin-left:20px;
+  margin-right:auto;
+  background-color: rgb(161, 31, 31);
+  border:none;
+  opacity: 0.95;
+  font-size: 20px;
+}
+.bt:hover{
+  cursor:pointer;
+  text-align: center;
+  color:white;
+  width:200px;
+  height:50px;
+  margin-top:5%;
+  margin-left:20px;
+  margin-right:auto;
+  font-size: 20px;
+  
+  background-color: rgb(150, 87, 87);
+  border:none;
+  opacity: 0.95;
+}
+.music-container {
+  background-color:saddlebrown;
+  border-radius: 15px;
+  box-shadow: 0 20px 20px 0 rgba(252, 206, 169, 0.6);
+  display: flex;
+  padding: 20px 30px;
+  position: relative;
+  margin: 100px 100px;
+  margin-left:300px;
+  width:70%;
+}
+
+.img-container {
+  position: relative;
+  width: 110px;
+}
+
+.img-container::after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+}
+
+.img-container img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 110px;
+  width: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: rotate 3s linear infinite;
+  animation-play-state: paused;
+}
+
+.music-container.play .img-container img {
+  /*animation-play-state: running;*/
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index:1;
+  padding-left: 50%;
+}
+
+.action-btn {
+  background-color:saddlebrown;
+  border: 0;
+  color: rgb(194, 100, 38);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.action-btn.action-btn-big {
+  color: #cdc2d0;
+  font-size: 30px;
+}
+
+.action-btn:focus {
+  outline: 0;
+}
+
+.music-info {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  padding: 10px 10px 10px 150px;
+  opacity: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 0;
+}
+
+.music-info h4 {
+  margin: 0;
+}
+
+.music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
+
+.progress {
+  background-color: #feba8d;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+
+.scal
+{
+  position:fixed;
+  margin-left: -750px;
+  height:50px;
+  width: 120px;
+  background-color: rgb(161, 31, 31);
+  border:none;
+  transition: 0.5s ease-in;
+}
+.scal:hover{
+  position:fixed;
+  cursor:pointer;
+  width:150px;
+  background-color: rgb(85, 20, 20);
+  border:none;
+}
+.scal.on
+{
+  position:fixed;
+  width:180px;
+  background-color: rgb(85, 20, 20);
+  border:none;
+}
+
+
+.b{
+  
+  margin-top:30px;
+}
+.c{
+  
+  margin-top:100px;
+}
+.cs{
+  
+  margin-top:170px;
+}
+.d{
+  
+  margin-top: 240px;
+}
+
+.ds{
+  
+  margin-top:310px;
+}
+.f{
+  
+  margin-top:380px;
+}
+.fs{
+  
+  margin-top:450px;
+}
+.g{
+  
+  margin-top:520px;
+}
+.gs{
+  
+  margin-top:590px;
+}
+.a{
+  
+  margin-top:660px;
+}
+
+.haha
+{
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  animation: rotate 3s linear infinite;
+  animation-play-state: paused;
+}
+.haha:hover
+{
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  animation-play-state: running;
+
+}
